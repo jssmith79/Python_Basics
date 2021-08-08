@@ -22,6 +22,7 @@ else:
     New = ((Cont / YTDSAL) * 100)
     CheckAmt = (sal / 24) * (New / 100)
 
+# calculating the output# 
 
 print("To maximize your contribution the percentage you need to contribute: ")
 print(New)
