@@ -1,10 +1,9 @@
 # 401k contribution calculator#
 
 #variables_in_snake_case#
-salary = int(input("Enter current annual salary:"))
+salary = int(input("Enter current annual base salary:"))
 ytd_contributions = int(input("Enter your contributions to date:"))
 remaining_pay_periods = int(input("How many pay periods are left in the year?"))
-ytd_salary = int(input("Enter Year to Date Gross Pay:"))
 age = int(input("Enter your age this year:"))
 
 CURRENT_YEAR_MAXIMUM_CONTRIBUTION_UNDER_50 = 19500.0
@@ -16,11 +15,12 @@ if age < 50:
 if age >= 50:
     contribution = (CURRENT_YEAR_MAXIMUM_CONTRIBUTION_OVER_50 - ytd_contributions)
 
-remaining_salary = salary - ytd_salary
 remaining_contributions = contribution - ytd_contributions
-new_pay_period_dollar_amount = remaining_contributions / remaining_pay_periods
-
+new_pay_period_dollar_amount = float(remaining_contributions / remaining_pay_periods)
+new_pay_period_percent_amount = float(remaining_contributions / remaining_pay_periods) / (salary / 24)
 # calculating the output#
 
 print("The amount per paycheck will be: ")
 print(new_pay_period_dollar_amount)
+print("The deferral percentage will be: ")
+print(new_pay_period_percent_amount)
