@@ -6,6 +6,7 @@ ytd_contributions = int(input("Enter your contributions to date:"))
 remaining_pay_periods = int(input("How many pay periods are left in the year?"))
 ytd_salary = int(input("Enter Year to Date Gross Pay:"))
 age = int(input("Enter your age this year:"))
+
 CURRENT_YEAR_MAXIMUM_CONTRIBUTION_UNDER_50 = 19500.0
 CURRENT_YEAR_MAXIMUM_CONTRIBUTION_OVER_50 = 26000.0
 
@@ -17,7 +18,7 @@ if age >= 50:
 
 remaining_salary = salary - ytd_salary
 remaining_contributions = contribution - ytd_contributions
-new_pay_period_dollar_amount = (remaining_contributions / remaining_pay_periods)
+new_pay_period_dollar_amount = remaining_contributions / remaining_pay_periods
 
 # calculating the output#
 
