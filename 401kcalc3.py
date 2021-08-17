@@ -10,12 +10,11 @@ CURRENT_YEAR_MAXIMUM_CONTRIBUTION_UNDER_50 = 19500.0
 CURRENT_YEAR_MAXIMUM_CONTRIBUTION_OVER_50 = 26000.0
 
 if age < 50:
-    contribution = (CURRENT_YEAR_MAXIMUM_CONTRIBUTION_UNDER_50 - ytd_contributions)
+    remaining_contributions = (CURRENT_YEAR_MAXIMUM_CONTRIBUTION_UNDER_50 - ytd_contributions)
 
 if age >= 50:
-    contribution = (CURRENT_YEAR_MAXIMUM_CONTRIBUTION_OVER_50 - ytd_contributions)
+    remaining_contributions = (CURRENT_YEAR_MAXIMUM_CONTRIBUTION_OVER_50 - ytd_contributions)
 
-remaining_contributions = contribution - ytd_contributions
 new_pay_period_dollar_amount = float(remaining_contributions / remaining_pay_periods)
 new_pay_period_percent_amount = float(remaining_contributions / remaining_pay_periods) / (salary / 24)
 # calculating the output#
