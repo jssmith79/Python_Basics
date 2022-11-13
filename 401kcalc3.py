@@ -1,6 +1,7 @@
 # 401k contribution calculator#
-
+#updated for 2023 annual maximums
 #variables_in_snake_case#
+
 salary = int(input("Enter current annual base salary:"))
 ytd_contributions = int(input("Enter your contributions to date:"))
 remaining_pay_periods = int(input("How many semi-monthly pay periods are left in the year?"))
